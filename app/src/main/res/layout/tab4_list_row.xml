@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/playListName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@+id/tab4_list_row_three_dot_menu"
+        android:layout_toStartOf="@+id/tab4_list_row_three_dot_menu"
+        android:singleLine="true"
+        android:text="Demo"
+        android:textColor="@color/list_item_text1" />
+
+    <ImageButton
+        android:id="@+id/tab4_list_row_three_dot_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@color/listview_gridview_background"
+        android:onClick="threeDot"
+        android:src="@drawable/three_dot_menu" />
+
+</RelativeLayout>

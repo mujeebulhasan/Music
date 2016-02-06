@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="55dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@id/drag_handle"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drag" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_toRightOf="@+id/drag_handle"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/list_item_text1"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

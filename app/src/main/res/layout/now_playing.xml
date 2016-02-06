@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:dslv="http://schemas.android.com/apk/res-auto"
+    xmlns:sample="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/npRl1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/ColorPrimary">
+
+        <ImageView
+            android:id="@+id/albumArtMini"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_mp_song_playback" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/albumArtMini"
+            android:layout_toLeftOf="@+id/queue_play"
+            android:layout_toRightOf="@+id/albumArtMini"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/np_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Song title"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/np_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/np_title"
+                android:singleLine="true"
+                android:text="Song album"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/queue_play"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/ColorPrimary"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_play_arrow_white_36dp"
+            android:tag="play" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/npRl2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/npRl1"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/albumArtBig"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/np_controls"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_mp_song_list"
+            android:visibility="visible" />
+
+
+        <RelativeLayout
+            android:id="@+id/queue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/np_controls"
+            android:clickable="true"
+            android:visibility="gone">
+
+
+            <FrameLayout
+                android:id="@+id/container1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true" />
+
+
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/myFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/np_controls"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_queue_music_black_36dp"
+            app:elevation="4dp" />
+
+        <RelativeLayout
+            android:id="@+id/np_controls"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ColorPrimary">
+
+            <ImageView
+                android:id="@+id/favourite"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="30dp"
+                android:onClick="favourite"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/favorite_not_active_empty" />
+
+
+            <SeekBar
+                android:id="@+id/progressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/rl3"
+                android:layout_marginBottom="10dp"
+                android:maxHeight="3dip"
+                android:minHeight="3dip"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:progressDrawable="@drawable/progressbar" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp">
+
+
+                <ImageButton
+                    android:id="@+id/shuffle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="shuffle"
+                    android:background="@color/ColorPrimary"
+                    android:src="@drawable/shuffle_white" />
+
+                <ImageButton
+                    android:id="@+id/prev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/shuffle"
+                    android:background="@color/ColorPrimary"
+                    android:src="@drawable/ic_skip_previous_white_36dp" />
+
+
+                <ImageButton
+                    android:id="@+id/play_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/ColorPrimary"
+                    android:src="@drawable/ic_play_arrow_white_36dp" />
+
+
+                <ImageButton
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_toLeftOf="@+id/repeat"
+                    android:background="@color/ColorPrimary"
+                    android:src="@drawable/ic_skip_next_white_36dp" />
+
+                <ImageButton
+                    android:id="@+id/repeat"
+                    android:onClick="repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/ColorPrimary"
+                    android:src="@drawable/repeat_white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/t3play"
+        android:title="Play" />
+    <item
+        android:id="@+id/t3addToQueue"
+        android:title="Add to queue" />
+    <item
+        android:id="@+id/t3addToPlayList"
+        android:title="Add to playlist" />
+</menu>

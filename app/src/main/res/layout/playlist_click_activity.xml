@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/playlist_toolbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/playListSongs"
+        android:layout_below="@+id/playlist_toolbar"
+        android:layout_width="wrap_content"
+        android:background="@color/listview_gridview_background"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
